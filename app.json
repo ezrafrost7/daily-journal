@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Smart Journal",
+    "slug": "smart-journal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Smart Journal uses the microphone for voice input so you can journal hands-free.",
+        "NSSpeechRecognitionUsageDescription": "Smart Journal uses speech recognition to convert your voice to text."
+      }
+    },
+    "android": {
+      "package": "com.smartjournal.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "permissions": [
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.USE_EXACT_ALARM",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.MANAGE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#1a1a2e",
+          "sounds": [],
+          "mode": "production"
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Smart Journal needs microphone access for voice input."
+        }
+      ]
+    ]
+  }
+}
